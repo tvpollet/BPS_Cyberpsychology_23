@@ -79,7 +79,7 @@ bib <- ReadBib(file.name)
 
 ## Today
 
-* Quick background, but low in theory.
+* Quick background, but warning: very low in theory.
 
 --
 
@@ -87,9 +87,12 @@ bib <- ReadBib(file.name)
 
 --
 
-* Findings from a larger study funded by [Facebook Research](https://research.facebook.com/blog/2018/12/announcing-the-winners-of-the-instagram-research-awards-for-social-technologies/). Together with Sam Roberts (LJMU), Connor Malcolm (Northumbria), Kris McCarty (Northumbria).
+* Findings from a larger study funded by [Facebook Research](https://research.facebook.com/blog/2018/12/announcing-the-winners-of-the-instagram-research-awards-for-social-technologies/).
 
 --
+
+* Together with Sam Roberts (LJMU), Connor Malcolm (Northumbria), Kris McCarty (Northumbria).
+
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/n6ljtq0aO6Zqg/giphy.gif") 
@@ -100,18 +103,27 @@ knitr::include_graphics("https://media.giphy.com/media/n6ljtq0aO6Zqg/giphy.gif")
 
 Since their inception this has been a debate.
 
+--
+
+A lot of work focused on Facebook but more recently a focus on Instagram `r Citep(bib, "Faelens2021")`.
+
+--
+
+`r Citet(bib, "Faelens2021")` suggest that there is no strong evidence for a consistent association between Instagram use and anxiety, with little research specifically focused on whether type of use is associated with anxiety.
+
+```{r, out.width = "250px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("ohdear.gif") 
+```
 
 ---
 ## Moral panics
+
+Why does this matter? `r Citep(bib, "Orben2020")`
 
 
 ```{r, out.width = "400px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("generations.jpg") 
 ```
-
---
-
-`r Citet(bib, "Orben2020")`
 
 ???
 Even though Twenge also notes that there are positives.
@@ -123,11 +135,19 @@ Even though Twenge also notes that there are positives.
 
 --
 
-* Little work comparing users to non-users
+* Little work comparing users to non-users. This work yielded mixed findings and was often from non-representative samples `r Citep(bib, "Brailovskaia2018","Mackson2019")`
 
 --
 
-* Limited work
+* Limited work on how type of use relates to well-being. This is also a mixed bag `r Citep(bib, "Valkenburg2022")`.
+
+```{r, out.width = "350px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("typing.gif")
+```
+
+???
+1.2 Billion users overall
+Yang (2016) found that Instagram interaction and browsing were related to lower levels of loneliness, with broadcasting associated with higher levels of loneliness. 
 
 ---
 ## Method: participants
@@ -150,7 +170,7 @@ Even though Twenge also notes that there are positives.
 
 * 375 out of 498 participants indicated that they used Instagram.
 
-```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+```{r, out.width = "250px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("who.gif")
 ```
 
@@ -162,17 +182,21 @@ knitr::include_graphics("who.gif")
 ---
 ## Method: Measures
 
-* Anxiety (Cronbach’s $\alpha$ = 0.87) and depression (Cronbach’s $\alpha$ = 0.83)  (HADS, `r Citet(bib, "Zigmond1983")`). 
+* Anxiety (HADS, Cronbach’s $\alpha$ = 0.87) and depression (HADS, Cronbach’s $\alpha$ = 0.83) `r Citep(bib, "Zigmond1983")`. 
 
 --
 
-* Loneliness (Cronbach’s $\alpha$ = 0.94, UCLA, `r Citep(bib, "Russell1980")`)
+* Loneliness (UCLA, Cronbach’s $\alpha$ = 0.94) `r Citep(bib, "Russell1980")`
 
 --
 
-* Instagram use scale (`r Citep(bib, "Yang2016")`): active use (interaction and broadcast) and passive use (browsing). 
+* Instagram use scale `r Citep(bib, "Yang2016")`: active use (interaction and broadcast) and passive use (browsing). 
 
 Interaction (Cronbach’s $\alpha$ = 0.75), Browsing (Cronbach’s $\alpha$  = .81) and Broadcasting (Cronbach’s $\alpha$ = .83)
+
+```{r, out.width = "350px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("measurement.gif")
+```
 
 ???
 Unitary construct.
@@ -181,7 +205,7 @@ Modified from 1-5 to 1-10. Exploratory factor analysis.
 ---
 ## Matching
 
-* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) (`r Citep(bib, "Ho2011")`). 
+* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) `r Citep(bib, "Ho2011")`. 
 
 --
 
@@ -189,7 +213,7 @@ Modified from 1-5 to 1-10. Exploratory factor analysis.
 
 --
 
-This generates weights to be used in regression (372 users vs 100 non-users).
+This generates weights to be used in regression model (372 users vs 100 non-users).
 
 ```{r, out.width = "550px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("matching.gif")
@@ -198,7 +222,7 @@ knitr::include_graphics("matching.gif")
 ???
 genetic matching effect.
 
-From stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
+From Stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
 
 ---
 ## Bayes Factors
@@ -224,6 +248,10 @@ knitr::include_graphics("Bayes_Theorem_MMB_01.jpg") # image from: https://common
 --
 
 * Embedded in a Social Network Survey in [GENSI](http://www.tobiasstark.nl/GENSI/GENSI.htm). Not discussed here.
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("get_to_point.gif")
+```
 
 ---
 ## Correlations
@@ -300,6 +328,7 @@ knitr::include_graphics("nothing.gif")
 
 ???
 Further exploration with a decision tree model from machine learning only showed age as relevant predictor.
+
 Reference categories are female (Gender), Other (Nationality) and A-Level (Education)
 
 ---
@@ -331,7 +360,7 @@ Reference categories are female (Gender), Other (Nationality) and A-Level (Educa
 ---
 ## Summary
 
-* No support for a difference between users and non-users.
+* No support for a difference between users and non-users in mental well-being.
 
 --
 
@@ -339,7 +368,15 @@ Reference categories are female (Gender), Other (Nationality) and A-Level (Educa
 
 --
 
-In line with some published work finding no relationships....
+In line with some published work finding no relationships... .
+
+--
+
+Null findings are important... .
+
+```{r, out.width = "350px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("null.gif")
+```
 
 ---
 ## Limitations
@@ -372,11 +409,11 @@ knitr::include_graphics("correlation_2x.png") # from https://xkcd.com/552/
 ---
 ## Further research
 
-* Starting to use or leaving instagram.
+* Starting to use or leaving Instagram.
 
 --
 
-* Actual usage patterns from instagram account.
+* Actual usage patterns from Instagram account.
 
 --
 
@@ -398,7 +435,7 @@ knitr::include_graphics("https://media.giphy.com/media/3ohzdRoOp1FUYbtGDu/giphy.
 ---
 ## Acknowledgments
 
-* I am greatly indebted to my colloborators. (Any mistakes are my own!). Preprint is [here](https://psyarxiv.com/2583s/)
+* I am greatly indebted to my collaborators. (Any mistakes are my own!). Preprint is [here](https://psyarxiv.com/2583s/)
 
 * This project was funded by [Facebook(/Meta)](https://research.facebook.com/blog/2018/12/announcing-the-winners-of-the-instagram-research-awards-for-social-technologies/). The funder was not involved in the study design, collection, analysis, interpretation of data, the writing of this presentation, or the decision to submit it for this conference.
 
