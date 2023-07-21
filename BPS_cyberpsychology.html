@@ -173,7 +173,7 @@ Yang (2016) found that Instagram interaction and browsing were related to lower 
 
 --
 
-* 257 women, 236 men, 2 neither male or female, 3 non-disclosures). 
+* 257 women, 236 men, 2 neither male or female, 3 non-disclosures. 
 
 --
 
@@ -205,48 +205,17 @@ Yang (2016) found that Instagram interaction and browsing were related to lower 
 
 --
 
+* Do you use Instagram? (yes/no) 
+
 * Instagram use scale &lt;a name=cite-Yang2016&gt;&lt;/a&gt;([Yang, 2016](https://doi.org/10.1089/cyber.2016.0201)): active use (interaction and broadcast) and passive use (browsing). 
 
-Interaction (Cronbach’s `\(\alpha\)` = 0.75), Browsing (Cronbach’s `\(\alpha\)`  = .81) and Broadcasting (Cronbach’s `\(\alpha\)` = .83)
+--&gt; Interaction (Cronbach’s `\(\alpha\)` = 0.75), Browsing (Cronbach’s `\(\alpha\)`  = .81) and Broadcasting (Cronbach’s `\(\alpha\)` = .83)
 
 &lt;img src="measurement.gif" width="350px" style="display: block; margin: auto;" /&gt;
 
 ???
 Unitary construct.
 Modified from 1-5 to 1-10. Exploratory factor analysis. 
-
----
-## Matching
-
-* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) &lt;a name=cite-Ho2011&gt;&lt;/a&gt;([Ho, Imai, King, and Stuart, 2011](https://doi.org/10.18637/jss.v042.i08)). 
-
---
-
-* Full results: pre: [here](pre_.html) and post: [here](post_.html).
-
---
-
-This generates weights to be used in regression model (372 users vs 100 non-users).
-
-&lt;img src="matching.gif" width="550px" style="display: block; margin: auto;" /&gt;
-
-???
-genetic matching effect.
-
-From Stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
-
----
-## Bayes Factors
-
-* Allows us to quantify evidence for the null hypothesis &lt;a name=cite-Dienes2016&gt;&lt;/a&gt;&lt;a name=cite-Wagenmakers2007&gt;&lt;/a&gt;([Dienes, 2016](https://doi.org/10.1016/j.jmp.2015.10.003); [Wagenmakers, 2007](https://doi.org/10.3758/BF03194105)).
-
---
-
-* Qualifications for evidence by &lt;a name=cite-Jeffreys1961&gt;&lt;/a&gt;([Jeffreys, 1961](#bib-Jeffreys1961)): BF = 1 - No evidence, 1 &lt; BF &lt;= 3 - Anecdotal, 3 &lt; BF &lt;= 10 - Moderate, 10 &lt; BF &lt;= 30 - Strong, 30 &lt; BF &lt;= 100 - Very strong, BF &gt; 100 - Extreme.
-
---
-
-&lt;img src="Bayes_Theorem_MMB_01.jpg" alt="Bayes Theorem" width="500px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -259,6 +228,43 @@ From Stuart 2010: "the matching on or controlling for the observed covariates al
 * Embedded in a Social Network Survey in [GENSI](http://www.tobiasstark.nl/GENSI/GENSI.htm). Not discussed here.
 
 &lt;img src="get_to_point.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Analysis: Matching
+
+* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) &lt;a name=cite-Ho2011&gt;&lt;/a&gt;([Ho, Imai, King, and Stuart, 2011](https://doi.org/10.18637/jss.v042.i08)). 
+
+--
+
+* Matched on Gender, Age, Educational attainment and Nationality.
+
+--
+
+* Full results: pre: [here](pre_.html) and post: [here](post_.html).
+
+--
+
+This generates weights to be used in regression model (372 users vs 100 non-users).
+
+&lt;img src="matching.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+???
+genetic matching effect.
+
+From Stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
+
+---
+## Analysis: Bayes Factors
+
+* Allows us to quantify evidence for the null hypothesis &lt;a name=cite-Dienes2016&gt;&lt;/a&gt;&lt;a name=cite-Wagenmakers2007&gt;&lt;/a&gt;([Dienes, 2016](https://doi.org/10.1016/j.jmp.2015.10.003); [Wagenmakers, 2007](https://doi.org/10.3758/BF03194105)).
+
+--
+
+* Qualifications for evidence by &lt;a name=cite-Jeffreys1961&gt;&lt;/a&gt;([Jeffreys, 1961](#bib-Jeffreys1961)): BF = 1 - No evidence, 1 &lt; BF &lt;= 3 - Anecdotal, 3 &lt; BF &lt;= 10 - Moderate, 10 &lt; BF &lt;= 30 - Strong, 30 &lt; BF &lt;= 100 - Very strong, BF &gt; 100 - Extreme.
+
+--
+
+&lt;img src="Bayes_Theorem_MMB_01.jpg" alt="Bayes Theorem" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Correlations
@@ -1617,6 +1623,9 @@ div.WordSection1
 ## Anxiety
 
 &lt;img src="anxiety.png" alt="anxiety graph" width="500px" style="display: block; margin: auto;" /&gt;
+
+???
+372 users, 100 non-users
 
 ---
 ## Depression

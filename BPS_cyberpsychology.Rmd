@@ -156,7 +156,7 @@ Yang (2016) found that Instagram interaction and browsing were related to lower 
 
 --
 
-* 257 women, 236 men, 2 neither male or female, 3 non-disclosures). 
+* 257 women, 236 men, 2 neither male or female, 3 non-disclosures. 
 
 --
 
@@ -190,9 +190,11 @@ knitr::include_graphics("who.gif")
 
 --
 
+* Do you use Instagram? (yes/no) 
+
 * Instagram use scale `r Citep(bib, "Yang2016")`: active use (interaction and broadcast) and passive use (browsing). 
 
-Interaction (Cronbach’s $\alpha$ = 0.75), Browsing (Cronbach’s $\alpha$  = .81) and Broadcasting (Cronbach’s $\alpha$ = .83)
+--> Interaction (Cronbach’s $\alpha$ = 0.75), Browsing (Cronbach’s $\alpha$  = .81) and Broadcasting (Cronbach’s $\alpha$ = .83)
 
 ```{r, out.width = "350px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("measurement.gif")
@@ -201,43 +203,6 @@ knitr::include_graphics("measurement.gif")
 ???
 Unitary construct.
 Modified from 1-5 to 1-10. Exploratory factor analysis. 
-
----
-## Matching
-
-* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) `r Citep(bib, "Ho2011")`. 
-
---
-
-* Full results: pre: [here](pre_.html) and post: [here](post_.html).
-
---
-
-This generates weights to be used in regression model (372 users vs 100 non-users).
-
-```{r, out.width = "550px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("matching.gif")
-```
-
-???
-genetic matching effect.
-
-From Stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
-
----
-## Bayes Factors
-
-* Allows us to quantify evidence for the null hypothesis `r Citep(bib, "Dienes2016","Wagenmakers2007")`.
-
---
-
-* Qualifications for evidence by `r Citep(bib, "Jeffreys1961")`: BF = 1 - No evidence, 1 < BF <= 3 - Anecdotal, 3 < BF <= 10 - Moderate, 10 < BF <= 30 - Strong, 30 < BF <= 100 - Very strong, BF > 100 - Extreme.
-
---
-
-```{r, out.width = "500px", echo=FALSE, fig.align='center', fig.alt="Bayes Theorem"}
-knitr::include_graphics("Bayes_Theorem_MMB_01.jpg") # image from: https://commons.wikimedia.org/wiki/File:Bayes%27_Theorem_MMB_01.jpg
-```
 
 
 ---
@@ -254,6 +219,47 @@ knitr::include_graphics("get_to_point.gif")
 ```
 
 ---
+## Analysis: Matching
+
+* Matching algorithm. [`MatchIt`](https://kosukeimai.github.io/MatchIt/) `r Citep(bib, "Ho2011")`. 
+
+--
+
+* Matched on Gender, Age, Educational attainment and Nationality.
+
+--
+
+* Full results: pre: [here](pre_.html) and post: [here](post_.html).
+
+--
+
+This generates weights to be used in regression model (372 users vs 100 non-users).
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("matching.gif")
+```
+
+???
+genetic matching effect.
+
+From Stuart 2010: "the matching on or controlling for the observed covariates also matches on or controls for the unobserved covariates, in so much as they are correlated with those that are observed. Thus, the only unobserved covariates of concern are those unrelated to the observed covariates"
+
+---
+## Analysis: Bayes Factors
+
+* Allows us to quantify evidence for the null hypothesis `r Citep(bib, "Dienes2016","Wagenmakers2007")`.
+
+--
+
+* Qualifications for evidence by `r Citep(bib, "Jeffreys1961")`: BF = 1 - No evidence, 1 < BF <= 3 - Anecdotal, 3 < BF <= 10 - Moderate, 10 < BF <= 30 - Strong, 30 < BF <= 100 - Very strong, BF > 100 - Extreme.
+
+--
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center', fig.alt="Bayes Theorem"}
+knitr::include_graphics("Bayes_Theorem_MMB_01.jpg") # image from: https://commons.wikimedia.org/wiki/File:Bayes%27_Theorem_MMB_01.jpg
+```
+
+---
 ## Correlations
 
 ```{r user_corr, results='asis', echo=FALSE}
@@ -266,6 +272,9 @@ xfun::file_string('Use_correl.html')
 ```{r, out.width = "500px", echo=FALSE, fig.align='center', fig.alt="anxiety graph"}
 knitr::include_graphics("anxiety.png")
 ```
+
+???
+372 users, 100 non-users
 
 ---
 ## Depression
