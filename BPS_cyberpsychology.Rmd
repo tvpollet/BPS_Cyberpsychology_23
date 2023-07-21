@@ -326,6 +326,10 @@ knitr::include_graphics("nothing.gif")
 
 * Model 1 - Bayes Factor  = 2.78 in favour of effect, but note not longer supported after inclusion of age.
 
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("new_fact.gif")
+```
+
 ???
 Further exploration with a decision tree model from machine learning only showed age as relevant predictor.
 
@@ -344,6 +348,10 @@ Reference categories are female (Gender), Other (Nationality) and A-Level (Educa
 
 * Model 1 - Bayes Factor  = 127.52 in favour of null.
 
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("depression.gif")
+```
+
 ---
 ## Loneliness
 
@@ -356,6 +364,10 @@ Reference categories are female (Gender), Other (Nationality) and A-Level (Educa
 --
 
 * Model 1 - Bayes Factor  = 79.68 in favour of null.
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("lonely.gif")
+```
 
 ---
 ## Summary
