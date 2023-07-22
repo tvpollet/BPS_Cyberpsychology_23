@@ -430,7 +430,33 @@ knitr::include_graphics("correlation_2x.png") # from https://xkcd.com/552/
 ---
 ## Further research
 
-* Starting to use or leaving Instagram.
+* Starting to use or leaving Instagram. (Wave 2 = + 3 months, Wave 3 = + 6 months)
+
+--
+
+* Very preliminary analysis for Wave 2 (316 responses). 280 no change, 21 left, 15 joined -- **No matching on sociodemographics.**
+
+--
+
+* **Bayesian t-tests**: leaving vs. no change: Anxiety: 1.70; Depression: 3.07; Loneliness: 3.82.
+
+--
+
+* **Bayesian t-tests**: joining vs. no change: Anxiety: 2.91; Depression: 2.64; Loneliness: 3.17.
+
+--
+
+* **Bayesian t-tests**: joining vs. leaving: Anxiety: 1.61; Depression: 3.06; Loneliness: 3.05.
+
+```{r, out.width = "225px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("nothing_2.gif") # from https://xkcd.com/552/
+```
+
+???
+All in favour of null. But note Covid19 fully grasped hold... .
+
+---
+## Further research 2
 
 --
 
