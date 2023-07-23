@@ -266,6 +266,14 @@ knitr::include_graphics("Bayes_Theorem_MMB_01.jpg") # image from: https://common
 xfun::file_string('Use_correl.html')
 ```
 
+
+---
+## Correlations II
+
+```{r usage_corr, results='asis', echo=FALSE}
+xfun::file_string('cor_usage_table.html')
+```
+
 ---
 ## Anxiety
 
